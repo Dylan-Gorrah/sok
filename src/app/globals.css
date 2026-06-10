@@ -1,26 +1,41 @@
 @import "tailwindcss";
 
+/* Tailwind v4 — direct hex values so utilities generate correctly */
+@theme {
+  --color-cream: #F7F1E8;
+  --color-porcelain: #FDFBF7;
+  --color-latte: #EFE6D8;
+  --color-sand: #E3D7C5;
+  --color-espresso: #2B211B;
+  --color-mocha: #6B5847;
+  --color-coffee: #6F4E37;
+  --color-caramel: #C19A6B;
+  --color-clay: #B4633E;
+  --color-sage: #4F7942;
+}
+
+/* CSS variables for inline styles & non-Tailwind usage */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --cream: #F7F1E8;
+  --porcelain: #FDFBF7;
+  --latte: #EFE6D8;
+  --sand: #E3D7C5;
+  --espresso: #2B211B;
+  --mocha: #6B5847;
+  --coffee: #6F4E37;
+  --caramel: #C19A6B;
+  --clay: #B4633E;
+  --sage: #4F7942;
+  --font-display: "Fraunces Variable", serif;
+  --font-body: "Hanken Grotesk Variable", sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F7F1E8;
+  color: #2B211B;
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, .display {
+  font-family: var(--font-display);
 }

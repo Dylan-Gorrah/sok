@@ -5,7 +5,6 @@ import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 
 const slides = [
-  { src: "/img/sok-carousel.gif", alt: "Sok — carousel", unoptimized: true },
   { src: "/img/sock-basic.png", alt: "Sok — classic" },
   { src: "/img/sock-pocket-empty.png", alt: "Sok — pocket empty" },
   { src: "/img/sock-pocket-full.png", alt: "Sok — pocket full" },
@@ -54,7 +53,6 @@ export default function ImageCarousel() {
               fill
               className="object-cover"
               priority={index === 0}
-              unoptimized={slides[index].unoptimized ?? false}
             />
           </motion.div>
         </AnimatePresence>
